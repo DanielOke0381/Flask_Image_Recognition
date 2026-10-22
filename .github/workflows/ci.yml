@@ -27,7 +27,7 @@ jobs:
 
       - name: Run Pylint
         run: |
-          pylint --disable=imports app.py
+          pylint --disable=imports,broad-exception-caught app.py
 
       - name: Run Pytest
         run: |

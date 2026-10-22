@@ -26,7 +26,7 @@ def predict_image_file():
             pred = predict_result(img)
             return render_template("result.html", predictions=str(pred))
 
-        except (UnidentifiedImageError, KeyError, ValueError, AttributeError, Exception):
+        except (UnidentifiedImageError, KeyError, ValueError, AttributeError, TypeError, IOError):
             return render_template("result.html", err="File cannot be processed.")
 
     return render_template("index.html")
